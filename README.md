@@ -1,5 +1,4 @@
-# hello-world
-1st repository and sample
+# AtCoder 
+AtCoderの解いたファイルを保存します。
+今後整理はしたいですが、解けてないコードなども含まれています。
 
-#master branch change(commit)
-this is the master branch change
