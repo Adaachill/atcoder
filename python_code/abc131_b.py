@@ -1,11 +1,30 @@
-#!/bin/env python
-#｜sum(L)-sum(L-L[i])｜ が最少となるiの時のsum(L-L[i])を求める
-def main():
-  n,l = map(int,input().split())
-  ans = (2*l+n-1)*n//2
-  if l > 0:
-    ans -= l
-  elif l+n-1 <0:
-    ans -= (l+n-1)
+def print_ans(N,L):
+  """
+  Parameters
+  --------------
+  >>> print_ans(5,2)
+  18
+  >>> print_ans(3,-1) 
+  0
+  >>> print_ans(30,-50)
+  -1044
+  """
+  ans = 0
+  if L >= 0:
+    ans = (L+N-1+L+1)*(N-1)//2
+  elif L+N-1 <= 0:
+    ans = (L+N-2+L)*(N-1)//2
+  else:
+    ans = (L+N-1+L)*(N-1)//2
+
   print(ans)
-main()
+  
+
+def main():
+  N,L = map(int,input().split())
+  print_ans(N,L)
+
+
+if __name__ == '__main__':
+  main()
+
